@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "Do not disturb",
+  "description": "Hide unnwanted prohardver members forum message.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "dnd.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://prohardver.hu/*"],
+      "js": ["js/jquery-3.2.1.min.js"]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "storage"
+  ]
+}
